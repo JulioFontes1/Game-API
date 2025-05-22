@@ -3,7 +3,7 @@ import { randomUUID } from "crypto";
 
 async function getAllGames(req, res) {
   try {
-    const [results, fields] = await connection.query("SELECT * FROM `mobile`;");
+    const [results, fields] = await connection.query("SELECT * FROM `tb_game`;");
 
     res.status(200).send(results);
   } catch (error) {
